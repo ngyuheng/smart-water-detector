@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Water Detector | Monitor & Conserve</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+
+</head>
+
+<body>
+
+    <div class="alert-card-container">
+        <div class="card alert-card">
+            <div class="card-title">ALERT</div>
+            <div class="card-value" style="color: var(--alert);">TAP LEFT ON</div>
+            <div class="card-unit">for 15 minutes</div>
+            <button class="btn btn-primary" onclick="dismissAlert()" style="margin-top: 15px; width: 100%;">Dismiss</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">Smart Water <span>Detector</span></div>
+            <div class="status-indicator">
+                <span>Device Status:</span>
+                <div class="status-dot disconnected"></div>
+                <span>Disconnected</span>
+            </div>
+        </header>
+
+        <div class="dashboard-grid">
+
+            <div class="impact-stat">
+                <h3>Your Water Impact</h3>
+                <p>The water you've saved this month equals the daily needs of 2 households in water-scarce regions!</p>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-card card">
+                    <div class="stat-icon">⏱</div>
+                    <div class="stat-value">2.3h</div>
+                    <div class="stat-label">Tap On Time Today</div>
+                </div>
+                
+                <div class="stat-card card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-value">$0.45</div>
+                    <div class="stat-label">Estimated Cost Today</div>
+                </div>
+                
+                <div class="stat-card card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-value">82%</div>
+                    <div class="stat-label">More efficient than last week</div>
+                </div>
+            </div>
+
+            <div class="card main-card">
+                <div>
+                    <div class="card-title">CURRENT WATER FLOW</div>
+                    <div class="water-flow">
+                        <div class="water-icon">💧</div>
+                        <div>
+                            <div class="card-value">0.0</div>
+                            <div class="card-unit">liters per minute</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card-title">TAP STATUS</div>
+                    <div class="card-value" style="color: #4caf50;">OFF</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">TODAY'S USAGE</div>
+                <div class="card-value">12.5</div>
+                <div class="card-unit">liters</div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">WEEKLY AVERAGE</div>
+                <div class="card-value">85.2</div>
+                <div class="card-unit">liters</div>
+            </div>
+            
+            <div class="chart-container">
+                <h3>Water Usage History</h3>
+                <!-- Chart would be rendered here with Chart.js or similar -->
+                <div style="height: 250px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
+                    [Water Usage Chart Would Appear Here]
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            Smart Water Detector • Helping you conserve water through smart monitoring
+        </footer>
+    </div>
+</body>
+</html>
