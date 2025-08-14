@@ -29,6 +29,11 @@ header {
     margin-bottom: 30px;
 }
 
+.connect-container {
+    align-items: center;
+    gap: 10px;
+}
+
 .logo {
     font-size: 24px;
     font-weight: bold;

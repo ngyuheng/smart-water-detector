@@ -23,10 +23,15 @@
     <div class="container">
         <header>
             <div class="logo">Smart Water <span>Detector</span></div>
-            <div class="status-indicator">
-                <span>Device Status:</span>
-                <div class="status-dot disconnected"></div>
-                <span>Disconnected</span>
+            <div class="connect-container">
+                <div class="status-indicator">
+                    <span>Device Status:</span>
+                    <div class="status-dot disconnected"></div>
+                    <span class="status-text">Disconnected</span>
+                </div>
+                <div class="connect-device">
+                    <span><button class="btn btn-primary connect-button" onclick="connectDevice()" style="margin-top: 15px; width: 100%;">Connect</button></span>
+                </div>
             </div>
         </header>
 
@@ -40,20 +45,20 @@
             <div class="stats-container">
                 <div class="stat-card card">
                     <div class="stat-icon">⏱</div>
-                    <div class="stat-value">2.3h</div>
+                    <div class="stat-value tap-time">2 min</div>
                     <div class="stat-label">Tap On Time Today</div>
                 </div>
                 
                 <div class="stat-card card">
                     <div class="stat-icon">💰</div>
-                    <div class="stat-value">$0.45</div>
+                    <div class="stat-value est-cost">$0.45</div>
                     <div class="stat-label">Estimated Cost Today</div>
                 </div>
                 
                 <div class="stat-card card">
                     <div>
                         <div class="stat-icon">🚰</div>
-                        <div class="stat-value" style="color: #4caf50;">OFF</div>
+                        <div class="stat-value tap-status" style="color: #4caf50;">OFF</div>
                         <div class="stat-label">Tap Status</div>
                     </div>
                 </div>
@@ -62,13 +67,13 @@
             <div class="chart-container">
                 <div class="chart-card card">
                     <div class="card-title">CURRENT WATER FLOW</div>
-                    <div class="card-value">0.0</div>
+                    <div class="card-value water-flow">0.0</div>
                     <div class="card-unit">liters per minute</div>
                 </div>
                 
                 <div class="chart-card card">
                     <div class="card-title">TODAY'S USAGE</div>
-                    <div class="card-value">12.5</div>
+                    <div class="card-value water-usage">12.5</div>
                     <div class="card-unit">liters</div>
                 </div>
                 
