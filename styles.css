@@ -142,7 +142,7 @@ header {
 
 .graph-container {
     grid-column: span 4;
-    height: 300px;
+    height: 500px;
     background: white;
     border-radius: 10px;
     padding-left: 20px;

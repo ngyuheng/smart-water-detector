@@ -24,6 +24,7 @@ async function connectDevice() {
     document.querySelector('.connect-button').setAttribute('onclick', 'disconnectDevice()');
     document.querySelector('.status-dot').classList.remove('disconnected');
     document.querySelector('.status-dot').classList.add('connected');
+    createGraph();
     dataReader();
 }
 
@@ -80,3 +81,24 @@ function updateStatus(status) {
     document.querySelector('.water-usage').textContent = status.totalUsage;
 }
 
+function createGraph() {
+    // Using plotly, plot a graph of water-usage against time
+    const trace = {
+        y: [79.2, 80.1, 80.7, 81.3, 80.8, 79.9, 80.4, 80.0, 79.7, 80.6, 80.2, 81.0, 80.5],
+        x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+        mode: 'lines+markers',
+        type: 'scatter'
+    };
+
+    var layout = {
+        autosize: true,
+        margin: {
+            l: 20,
+            r: 20,
+            t: 10,
+            b: 40
+        }
+    }
+
+    const plot = Plotly.newPlot('water-usage-plot', [trace], layout);
+}
